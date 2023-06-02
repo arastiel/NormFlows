@@ -13,6 +13,7 @@ filename - savefile model
 lr - learning rate optimizer
 epochs_to_learn - epochs to learn once started
 num_ex - numbers of generated images
+target_dist - chosen target distribution
 """
 
 '''
@@ -78,7 +79,7 @@ elif dataset == 'celebA':
 
 filename = "NICE_mnist3.pt.tar"
 #filename = "testy.pt.tar"  #TEST
-savefolder = "ULTRATEST/"
+savefolder = "testfolder/"
 
 #filename = "NICE_mnist2.pt.tar"        #REAL
 #savefolder = "NICEmnist2/"
@@ -88,7 +89,6 @@ epochs_to_learn = 500
 num_ex = 36  # 9, 16, 25, 36,....
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
 
 #target_dist = Normal(0., 1.)
 #target_dist = Laplace(-5., 4.)
