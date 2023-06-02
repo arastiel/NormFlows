@@ -22,6 +22,13 @@ pretrained models - RealNVP_celebA3.pt.tar
                     NICE_celebA3.pt.tar
                     NICE_mnist3.pt.tar
                     RealNVP2_test.pt.tar
+
+set filename to one above if want to use pretrained model (!!! dataset/model variables have to match !!!)
+
+ex.:  filename = "RealNVP_celebA3.pt.tar" 
+      dataset = "celebA"
+      model = "RealNVP"
+loads the model - can be used to train further or generate images (!!! dataset/model variables have to match !!!)
                     
 ---------- IMPORTANT DATA USED OF PRETRAINED MODELS ----------
                            
