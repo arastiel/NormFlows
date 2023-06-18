@@ -25,8 +25,6 @@ def show_imgs(imgs, epoch=None):
     #print("clean imgs")
     #print(imgs)
     imgs = utils.make_grid(imgs, nrow=nrow, normalize=True, scale_each=True, pad_value=0.1)
-    #print("GRID IMGS?")
-    #print(imgs)
     np_imgs = imgs.cpu().numpy()
     # Plot the grid
     plt.figure(figsize=(1.5 * nrow, 1.5 * ncol))
@@ -133,7 +131,6 @@ def test_dataset(data):
             # break
         break
 
-    print("looks good?")
     # plt.waitforbuttonpress()
 
 
@@ -203,8 +200,6 @@ def interpolate(model, img1, img2, num_steps=10):
     """
     imgs = torch.stack([img1, img2], dim=0).to('cuda')
     og_imgs = imgs
-    #print("OG IMGS")
-    #print(og_imgs)
     #show_imgs(og_imgs)
     model.eval()
     imgs, _ = pre_process(imgs, False) #NEU
